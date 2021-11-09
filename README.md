@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+   <img src="https://alogarapa.vercel.app/Logo.png" width="300"/>
+</p>
 
-## Getting Started
+<p align="center">
+   <a href="https://www.linkedin.com/in/andersonmarlon/">
+      <img alt="AndersonMarlon" src="https://img.shields.io/badge/-AndersonMarlon-5965e0?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-alogarapa?color=00BFA6">
 
-First, run the development server:
+  <a href="https://github.com/Yagasaki7K/website-alogarapa/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Yagasaki7K/website-alogarapa?color=00BFA6">
+  </a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-5965e0">
+  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Yagasaki7K/website-alogarapa?color=00BFA6" />
+  <a href="https://github.com/Yagasaki7K/website-alogarapa/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yagasaki7K/website-alogarapa?color=00BFA6&logo=github">
+  </a>
+</p>
 
+<div align="center">
+  <sub>AlôGarapa. Built with ❤︎ by
+    <a href="https://github.com/Yagasaki7K">Anderson "Yagasaki" Marlon</a> and
+    <a href="https://github.com/Yagasaki7K/website-alogarapa/graphs/contributors">
+      contributors
+    </a>
+  </sub>
+</div>
+
+# 📌 Table of Contents
+
+* [Demo Website](#eyes-demo-website)
+* [Technologies](#computer-technologies)
+* [Features](#rocket-features)
+* [Found a bug? Missing a specific feature?](#bug-issues)
+* [Contributing](#tada-contributing)
+* [License](#closed_book-license)
+
+# 👀 Demo Website
+👉  Demo: https://alogarapa.vercel.app/
+
+# 💻 Technologies
+This project was made using the follow technologies:
+
+* NextJS
+
+# 🚀 Features
+
+Many people after formatting the computer forget about which software they have installed, which is the best browser to use, which text editor to encode that program or even which version of the operating system they find to install on another computer. Instead of jumping from site to site in search of this information, I developed alogarapa, a web tool that shows through list; Softwares that are useful for your computer and that no longer need to stay in your head, so you can worry about other things.
+
+# 🚧 How to run
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone Repository
+$ git clone https://github.com/Yagasaki7K/website-alogarapa.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 🐛 Issues
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Feel free to **file a new issue** with a respective title and description on the the [Web alogarapa](https://github.com/Yagasaki7K/website-alogarapa/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# 🎉 Contributing
+First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Here's some tips:
 
-## Learn More
+* Check the [issues page](https://github.com/Yagasaki7K/website-alogarapa/issues) for already opened issues (or maybe even closed ones) that might already address your question/bug/feature request.
+* Feature requests are welcomed! Provide some details on why it would be helpful for you and others, explain how you're using bull-board and if possible even some screenshots if you are willing to mock something!
 
-To learn more about Next.js, take a look at the following resources:
+Check out the [contributing](./CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 📕 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Released in 2021
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made by [Anderson Marlon](https://github.com/Yagasaki7K).
+This project is under the [MIT license](./LICENSE).

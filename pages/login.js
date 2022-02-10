@@ -1,5 +1,17 @@
+import React from 'react'
 
+const login = () => {
+    return (
+        <div>
+            <head>
+                <title>AlôGarapa! | Página Inicial</title> 
+                <link rel="icon" type="image/png" href="/images/icon.png"/>
+            </head>
 
-const Login = () => {}
+            
+            <h1>Logged!</h1>
+        </div>
+    )
+}
 
-export default Login
+export default login

@@ -26,9 +26,9 @@ const NavigatorMenu = styled.div`
         text-align: center;
         
         h2 {
-            margin-top: -200px;
+            margin-top: -250px;
             font-size: 4rem;
-            color: #414143;
+            color: #e5e5e5;
         }
     }
 `

@@ -1,12 +1,21 @@
 import firebase from 'firebase/app'
-import 'firebase/auth'
 
-if (!firebase.apps.length) {
-    firebase.initializeApp({
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-    })
-}
+import 'firebase/auth';
+import 'firebase/database';
 
-export default firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyBVWN12CmHRcVQuAgrUzZuqX2XAt9fKJAY",
+    authDomain: "kalify-alogarapa.firebaseapp.com",
+    projectId: "kalify-alogarapa",
+    storageBucket: "kalify-alogarapa.appspot.com",
+    messagingSenderId: "707708876227",
+    appId: "1:707708876227:web:b22fe58601eec8b0e9f976",
+    measurementId: "G-RC3MV7WFV4"
+  };
+
+firebase.initializeApp(firebaseConfig)
+
+const auth = firebase.auth();
+const database = firebase.database();
+
+export { firebase, auth, database } 

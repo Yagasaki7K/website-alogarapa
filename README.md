@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://alogarapa.vercel.app/Logo.png" width="300"/>
+   <img src="https://github.com/Yagasaki7K/website-alogarapa/blob/main/public/images/logo.png" width="300"/>
 </p>
 
 <p align="center">

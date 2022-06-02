@@ -67,7 +67,7 @@ const Dashboard = () => {
                 <footer>
                     <div className="footer-content">
                         <h2>FindYourPet</h2>
-                        <a href="http://kalify.netlify.com/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
+                        <a href="http://kalify.vercel.app/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
                         <a href="/sobre-nos">Sobre nós</a>
                         <a href="/fale-conosco">Fale Conosco</a>
                         <a href="/carreiras">Carreiras</a>

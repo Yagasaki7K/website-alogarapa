@@ -39,6 +39,11 @@ const Dashboard = () => {
                 </div>
             </NavigatorHomeDetails>
             <DashboardDetails>
+
+            <a href="/signup" className="advice">
+                <i className="uil uil-shield-exclamation"></i>&nbsp;Seu negócio vende caldo de cana e ele não está em nossa listagem? Cadastre já!&nbsp;<i className="uil uil-shield-exclamation"></i>
+            </a>
+
             <div className="garapa-list">
                 {
                     garapaData && garapaData.map((garapa, index) => (
@@ -56,8 +61,37 @@ const Dashboard = () => {
                         </a>
                     ))
                 }
-            
             </div>
+
+            <hr/>
+                <footer>
+                    <div className="footer-content">
+                        <h2>FindYourPet</h2>
+                        <a href="http://kalify.netlify.com/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
+                        <a href="/sobre-nos">Sobre nós</a>
+                        <a href="/fale-conosco">Fale Conosco</a>
+                        <a href="/carreiras">Carreiras</a>
+                    </div>
+
+                    <div className="footer-content">
+                        <h2>Descubra</h2>
+                        <a href="/signup">Cadastre seu negócio</a>
+                        <a href="/como-funciona">Como funciona?</a>
+                        <a href="#" target="_blank">Blog <i className="uil uil-external-link-alt"></i></a>
+                    </div>
+
+                    <div className="footer-content">
+                        <h2>Social</h2>
+                        <a href="https://twitter.com/KalifyInc" target="_blank">Twitter <i className="uil uil-external-link-alt"></i></a>
+                        <a href="https://instagram.com/yagasaki.dev" target="_blank">Instagram <i className="uil uil-external-link-alt"></i></a>
+                    </div>
+                </footer>
+
+                <div className="copyright">
+                    <i>
+                    © 2018 - {new Date().getFullYear()} - Kalify Inc |
+                    © 2022 - {new Date().getFullYear()} - AlôGarapa</i>
+                </div>
             </DashboardDetails>
         </>
     )

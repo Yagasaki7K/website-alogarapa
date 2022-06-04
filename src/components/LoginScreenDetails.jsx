@@ -25,6 +25,10 @@ const NavigatorMenu = styled.div`
         align-items: center;
         text-align: center;
         margin-top: 0rem;
+
+        @media (min-width: 1366px) {
+            margin-top: -15rem;
+        }
         
         .content-box {
             h2 {

@@ -26,7 +26,7 @@ const NavigatorMenu = styled.div`
         text-align: center;
         margin-top: 0rem;
 
-        @media (min-width: 1366px) {
+        @media (max-width: 1366px) {
             margin-top: -15rem;
         }
         

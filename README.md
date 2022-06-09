@@ -44,7 +44,11 @@
 
 This project was made using the follow technologies:
 
-* NextJS
+* Vite
+* ReactJS
+* Styled Components
+* Sanity.io
+* Vercel
 
 # 🚀 Features
 

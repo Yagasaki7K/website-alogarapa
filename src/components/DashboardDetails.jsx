@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const DashboardDetails = styled.div`
 
-background: #94913c;
+background: #aeaa46;
 height: 91.7vh;
 
 .garapa-list {

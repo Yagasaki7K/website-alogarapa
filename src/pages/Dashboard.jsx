@@ -4,6 +4,7 @@ import DashboardDetails from '../components/DashboardDetails'
 import sanityClient from '../client'
 
 import Logo from '../images/logo.png'
+import AddButton from '../components/AddButton'
 
 const Dashboard = () => {
     const [garapaData, setGarapaData] = useState(null);
@@ -36,21 +37,21 @@ const Dashboard = () => {
                     </a>
 
                     <a href="/sobre">Sobre AlôGarapa!</a>
-                    <a href="/seu-restaurante">Cadastre seu Restaurante</a>
-                    <a href="/contato">Contato</a>
+                    <a href="mailto:kalifyinc@gmail.com">Cadastre seu Restaurante</a>
+                    <a href="mailto:kalifyinc@gmail.com">Contato</a>
                 </div>
             </NavigatorHomeDetails>
             <DashboardDetails>
 
-            <a href="/signup" className="advice">
-                <i className="uil uil-shield-exclamation"></i>&nbsp;Seu negócio vende caldo de cana e ele não está em nossa listagem? Cadastre já!&nbsp;<i className="uil uil-shield-exclamation"></i>
+            <a href="mailto:kalifyinc@gmail.com" className="advice">
+                <i className="uil uil-shield-exclamation"></i>&nbsp;Seu negócio vende caldo de cana e ele não está em nossa listagem? Envie um e-mail!&nbsp;<i className="uil uil-shield-exclamation"></i>
             </a>
 
             <div className="garapa-list">
                 {
                     garapaData && garapaData.map((garapa, index) => (
 
-                        <a href={`tel:` + garapa?.contact} key={index}>
+                        <a href={`https://wa.me/` + garapa?.contact} key={index}>
                         <div className="garapa-list-item">
                             <img src={garapa.image.asset.url} alt={garapa?.name} />
 
@@ -70,16 +71,15 @@ const Dashboard = () => {
                     <div className="footer-content">
                         <h2>FindYourPet</h2>
                         <a href="http://kalify.vercel.app/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
-                        <a href="/sobre-nos">Sobre nós</a>
-                        <a href="/fale-conosco">Fale Conosco</a>
-                        <a href="/carreiras">Carreiras</a>
+                        <a href="/sobre">Sobre nós</a>
+                        <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
+                        <a href="/sobre#developer">Carreiras</a>
                     </div>
 
                     <div className="footer-content">
                         <h2>Descubra</h2>
-                        <a href="/signup">Cadastre seu negócio</a>
-                        <a href="/como-funciona">Como funciona?</a>
-                        <a href="#" target="_blank">Blog <i className="uil uil-external-link-alt"></i></a>
+                        <a href="mailto:kalifyinc@gmail.com">Cadastre seu negócio</a>
+                        <a href="/sobre">Como funciona?</a>
                     </div>
 
                     <div className="footer-content">
@@ -92,9 +92,10 @@ const Dashboard = () => {
                 <div className="copyright">
                     <i>
                     © 2018 - {new Date().getFullYear()} - Kalify Inc |
-                    © 2022 - {new Date().getFullYear()} - AlôGarapa</i>
+                    © {new Date().getFullYear()} - AlôGarapa</i>
                 </div>
             </DashboardDetails>
+            <AddButton/>
         </>
     )
 }

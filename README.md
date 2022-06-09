@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/Yagasaki7K/website-alogarapa/blob/main/public/images/logo.png" width="300"/>
+   <img src="https://github.com/Yagasaki7K/website-alogarapa/blob/main/src/images/logo.png" width="300"/>
 </p>
 
 <p align="center">
@@ -37,9 +37,11 @@
 * [License](#closed_book-license)
 
 # 👀 Demo Website
-👉  Demo: https://alogarapa.vercel.app/
+
+👉  Demo: <https://alogarapa.vercel.app/>
 
 # 💻 Technologies
+
 This project was made using the follow technologies:
 
 * NextJS
@@ -49,6 +51,7 @@ This project was made using the follow technologies:
 Many people after formatting the computer forget about which software they have installed, which is the best browser to use, which text editor to encode that program or even which version of the operating system they find to install on another computer. Instead of jumping from site to site in search of this information, I developed alogarapa, a web tool that shows through list; Softwares that are useful for your computer and that no longer need to stay in your head, so you can worry about other things.
 
 # 🚧 How to run
+
 ```bash
 # Clone Repository
 $ git clone https://github.com/Yagasaki7K/website-alogarapa.git
@@ -59,6 +62,7 @@ $ git clone https://github.com/Yagasaki7K/website-alogarapa.git
 Feel free to **file a new issue** with a respective title and description on the the [Web alogarapa](https://github.com/Yagasaki7K/website-alogarapa/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
 # 🎉 Contributing
+
 First of all, thank you for being interested in helping out, your time is always appreciated in every way. :100:
 
 Here's some tips:

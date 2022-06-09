@@ -3,10 +3,6 @@ import LoginScreenDetails from '../components/LoginScreenDetails'
 
 import Logo from '../images/logo.png'
 
-function redirectHome() {
-    window.location.href="/home"
-}
-
 const LoginScreen = () => {
 
     return (
@@ -18,8 +14,8 @@ const LoginScreen = () => {
                     </a>
 
                     <a href="/sobre">Sobre AlôGarapa!</a>
-                    <a href="/seu-restaurante">Cadastre seu Restaurante</a>
-                    <a href="/contato">Contato</a>
+                    <a href="mailto:kalifyinc@gmail.com">Cadastre seu Restaurante</a>
+                    <a href="mailto:kalifyinc@gmail.com">Contato</a>
                 </div>
             </NavigatorHomeDetails>
             
@@ -27,7 +23,7 @@ const LoginScreen = () => {
                 <div className="content">
                     <div className="content-box">
                         <h2>Encontre um caldo de cana <br/> Próximo de você!</h2>
-                        <button className="button" onClick={redirectHome}>Acessar</button>
+                        <a className="button" href="/dashboard">Acessar</a>
                     </div>
                 </div>
             </LoginScreenDetails>

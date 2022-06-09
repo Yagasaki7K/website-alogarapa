@@ -36,7 +36,7 @@ const NavigatorMenu = styled.div`
                 color: #e5e5e5;
             }
 
-            button {
+            a {
                 border: none;
                 border-radius: 15px;
                 background: #aeaa46;
@@ -44,9 +44,9 @@ const NavigatorMenu = styled.div`
                 text-transform: uppercase;
                 font-size: 16px;
                 font-weight: bold;
-                margin-top: 20px;
-                padding: 10px 150px;
+                padding: 5px 150px;
                 cursor: pointer;
+                text-decoration: none;
 
                 :hover {
                     transition: 2s;

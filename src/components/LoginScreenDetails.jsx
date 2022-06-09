@@ -6,12 +6,12 @@ const NavigatorMenu = styled.div`
     align-items: center;
     background-image: url('/src/images/background.jpg');
     background-repeat: no-repeat;
-    height: 88vh;
+    height: 88.7vh;
     width: 100%;
     overflow: hidden;
 
     @media (min-width: 1370px) {
-        height: 92vh;
+        height: 92.3vh;
         background-size: cover;
 
         h2 {

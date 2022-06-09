@@ -1,6 +1,8 @@
 import NavigatorHomeDetails from '../components/NavigatorHomeDetails'
 import LoginScreenDetails from '../components/LoginScreenDetails'
 
+import Logo from '../images/logo.png'
+
 function redirectHome() {
     window.location.href="/home"
 }
@@ -12,7 +14,7 @@ const LoginScreen = () => {
             <NavigatorHomeDetails>
                 <div className="NavMenu">
                     <a href="/">
-                        <img src="/src/images/logo.png"/>
+                        <img src={Logo}/>
                     </a>
 
                     <a href="/sobre">Sobre AlôGarapa!</a>

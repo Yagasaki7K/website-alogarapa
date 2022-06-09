@@ -3,6 +3,8 @@ import NavigatorHomeDetails from '../components/NavigatorHomeDetails'
 import DashboardDetails from '../components/DashboardDetails'
 import sanityClient from '../client'
 
+import Logo from '../images/logo.png'
+
 const Dashboard = () => {
     const [garapaData, setGarapaData] = useState(null);
 
@@ -30,7 +32,7 @@ const Dashboard = () => {
             <NavigatorHomeDetails>
                 <div className="NavMenu">
                     <a href="/">
-                        <img src="/src/images/logo.png"/>
+                        <img src={Logo}/>
                     </a>
 
                     <a href="/sobre">Sobre AlôGarapa!</a>

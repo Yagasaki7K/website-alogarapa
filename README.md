@@ -52,7 +52,7 @@ This project was made using the follow technologies:
 
 # 🚀 Features
 
-Many people after formatting the computer forget about which software they have installed, which is the best browser to use, which text editor to encode that program or even which version of the operating system they find to install on another computer. Instead of jumping from site to site in search of this information, I developed alogarapa, a web tool that shows through list; Softwares that are useful for your computer and that no longer need to stay in your head, so you can worry about other things.
+We at AlôGarapa are a web application service that aims to share information and location about establishments that offer the much-loved sugarcane juice on their menus. Currently maintained by the team at Kalify Inc, AloGarapa is fast, easy and simple to use.
 
 # 🚧 How to run
 

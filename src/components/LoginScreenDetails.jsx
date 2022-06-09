@@ -4,7 +4,7 @@ const NavigatorMenu = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://github.com/Yagasaki7K/website-alogarapa/blob/main/src/images/background.jpg');
+    background-image: url('https://github.com/Yagasaki7K/website-alogarapa/blob/main/src/images/background.jpg?raw=true');
     background-repeat: no-repeat;
     height: 88.7vh;
     width: 100%;

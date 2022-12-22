@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const NavigatorMenu = styled.div`
     display: flex;
@@ -39,7 +40,7 @@ const NavigatorMenu = styled.div`
             a {
                 border: none;
                 border-radius: 15px;
-                background: #aeaa46;
+                background: ${Colors.primary};
                 color: #e5e5e5;
                 text-transform: uppercase;
                 font-size: 16px;
@@ -50,7 +51,7 @@ const NavigatorMenu = styled.div`
 
                 :hover {
                     transition: 2s;
-                    background: #8f8b2b;
+                    background: ${Colors.primaryAlt};
                 }
             }
         }

@@ -1,5 +1,5 @@
 import React from 'react'
-import createRoot from 'react-dom'
+import ReactDOM from "react-dom/client";
 import './App.css'
 
 import LoginScreen from './pages/LoginScreen'
@@ -8,13 +8,14 @@ import Dashboard from './pages/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sobre from './pages/Sobre'
 
+const createRoot = ReactDOM.createRoot(document.getElementById("root"));
 createRoot.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<LoginScreen/>} />
-                <Route path="/dashboard" element={<Dashboard/>} />
-                <Route path="/sobre" element={<Sobre/>} />
+                <Route path="/" element={<LoginScreen />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/sobre" element={<Sobre />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,

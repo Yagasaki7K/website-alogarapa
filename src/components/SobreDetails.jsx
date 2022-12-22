@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const SobreDetails = styled.div`
-    background: #aeaa46;
+    background: ${Colors.primary};
     display: flex;
     justify-content: center;
     align-items: center;

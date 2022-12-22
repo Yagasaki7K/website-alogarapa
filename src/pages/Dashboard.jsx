@@ -1,6 +1,12 @@
 import { React, useState } from 'react'
 import NavigatorHomeDetails from '../components/NavigatorHomeDetails'
 import DashboardDetails from '../components/DashboardDetails'
+import MapsDetails from '../components/MapsDetails'
+
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import MapStyle from '../components/MapStyle'
+
+import 'leaflet/dist/leaflet.css'
 
 import Logo from '../images/logo.png'
 import AddButton from '../components/AddButton'
@@ -24,27 +30,28 @@ const Dashboard = () => {
             <DashboardDetails>
 
                 <a href="mailto:kalifyinc@gmail.com" className="advice">
-                    <i className="uil uil-shield-exclamation"></i>&nbsp;Seu negócio vende caldo de cana e ele não está em nossa listagem? Envie um e-mail!&nbsp;<i className="uil uil-shield-exclamation"></i>
+                    <i className="uil uil-shield-exclamation"></i>&nbsp;Seu negócio vende caldo de cana e ele não está em nossa listagem? Solicite!&nbsp;<i className="uil uil-shield-exclamation"></i>
                 </a>
 
-                <div className="garapa-list">
-                    {
-                        garapaData && garapaData.map((garapa, index) => (
-
-                            <a href={`https://wa.me/` + garapa?.contact} key={index}>
-                                <div className="garapa-list-item">
-                                    <img src={garapa.image.asset.url} alt={garapa?.name} />
-
-                                    <div className="garapa-list-item-info">
-                                        <h3>{garapa?.name}</h3>
-                                        <p><i className="uil uil-map-marker"></i> {garapa?.location}</p>
-                                        <p><i className="uil uil-phone"></i> {garapa?.contact}</p>
-                                    </div>
-                                </div>
-                            </a>
-                        ))
-                    }
-                </div>
+                <MapsDetails>
+                    <MapStyle>
+                        <div layout-align="center center" style={{ background: 'white', position: 'relative' }}>
+                            <MapContainer center={[-16.350, -56.666]} zoom={4} scrollWheelZoom={false} className="mapa-projeto">
+                                <TileLayer
+                                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                />
+                                <Marker position={[-22.859352775021673, -47.04971628178976]}>
+                                    <Popup>
+                                        <h4>Restaurente de Fulano</h4>
+                                        <p>Rua das Camélias, 453</p>
+                                        <p>Bairro Primavera - Campinas</p>
+                                    </Popup>
+                                </Marker>
+                            </MapContainer>
+                        </div>
+                    </MapStyle>
+                </MapsDetails>
 
                 <hr />
                 <footer>

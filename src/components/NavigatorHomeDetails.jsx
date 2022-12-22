@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const NavigatorHomeDetails = styled.div`
     display: flex;
@@ -9,7 +10,7 @@ const NavigatorHomeDetails = styled.div`
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        background: #aeaa46;
+        background: ${Colors.primary};
         height: 5rem;
         width: 100%;
 
@@ -27,7 +28,7 @@ const NavigatorHomeDetails = styled.div`
             border: none;
             width: 200px;
             height: 40px;
-            color:  #aeaa46;
+            color:  ${Colors.primary};
             background: transparent;
             font-weight: bold;
             border-radius: 5px;

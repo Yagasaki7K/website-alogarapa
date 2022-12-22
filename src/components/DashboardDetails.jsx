@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import Colors from '../utils/Colors'
 
 const DashboardDetails = styled.div`
 
-background: #aeaa46;
+background: ${Colors.primary};
 height: 91.7vh;
 
 .garapa-list {
@@ -31,10 +32,10 @@ height: 91.7vh;
         font-weight: 500;
         text-decoration: none;
         outline: none;
-        color: #aeaa46;
+        color: ${Colors.primary};
 
         :hover {
-            color: #94913c;
+            color: ${Colors.primaryAlt};
             background: #eee;
             transition: 2s;
         }
@@ -44,7 +45,7 @@ height: 91.7vh;
         width: 320px;
         background: #fff;
         height: 130px;
-        color: #aeaa46;
+        color: ${Colors.primary};
         border-radius: 15px;
         display: flex;
 
@@ -97,7 +98,8 @@ height: 91.7vh;
     }
 
     .copyright {
-        margin-top: 20px;
+        background: ${Colors.primary};
+        margin: 20px 0;
         display: flex;
         justify-content: center;
         color: #fff;

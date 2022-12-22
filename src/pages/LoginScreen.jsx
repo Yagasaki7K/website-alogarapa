@@ -14,8 +14,7 @@ const App = () => {
             <AppDetails>
                 <ul>
                     <a href="/"><img src={Logo} /></a>
-                    <li><a href="/sobre-nos">Sobre a Kalify</a></li>
-                    <li><a href="/carreiras">Carreiras</a></li>
+                    <li><a href="https://kalify.vercel.app">Sobre a Kalify</a></li>
                     <li><a href="https://discord.gg/jhSepmE7nN" target="_blank">Suporte</a></li>
                     <li><a href="/">Download</a></li>
                     <button onClick={() => toHome()}>Acessar</button>

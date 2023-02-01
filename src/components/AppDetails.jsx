@@ -38,6 +38,7 @@ const HomeDetails = styled.div`
     ul {
         margin-top: 1rem;
         display: flex;
+        font-weight: bold;
 
         img {
             width: 20rem;
@@ -142,11 +143,18 @@ const HomeDetails = styled.div`
         margin-top: 5rem;
         line-height: 5rem;
 
+        @media (max-width: 1366px) {
+            margin-top: -1rem;
+            margin-left: 5rem;
+
+        }
+
         h1 {
             font-size: 5rem;
             margin-top: 8rem;
             margin-bottom: 2rem;
             text-transform: uppercase;
+            font-family: 'Poppins',sans-serif;
 
             @media (max-width: 600px) {
                 margin-top: 2rem;

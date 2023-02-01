@@ -13,6 +13,7 @@ const NavigatorHomeDetails = styled.div`
         background: ${Colors.primary};
         height: 5rem;
         width: 100%;
+        font-family: 'Poppins', sans-serif;
 
         img {
             width: 10rem;

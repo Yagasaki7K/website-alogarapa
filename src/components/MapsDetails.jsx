@@ -3,6 +3,7 @@ import Colors from '../utils/Colors'
 
 const MapDetails = styled.div`
     margin-bottom: 40rem;
+
     .map-center{
         display: flex;
         justify-content: center;
@@ -12,6 +13,10 @@ const MapDetails = styled.div`
         margin-top: 10px;
         height: 40rem;
         width: 80%;
+
+        @media (max-width: 1366px){
+            height: 20rem;
+        }
     }
 
     .sidebar {

@@ -4,14 +4,14 @@
 
 <p align="center">
    <a href="https://www.linkedin.com/in/andersonmarlon/">
-      <img alt="AndersonMarlon" src="https://img.shields.io/badge/-AndersonMarlon-5965e0?style=flat&logo=Linkedin&logoColor=white" />
+      <img alt="AndersonMarlon" src="https://img.shields.io/badge/-AndersonMarlon-00BFA6?style=flat&logo=Linkedin&logoColor=white" />
    </a>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-alogarapa?color=00BFA6">
 
   <a href="https://github.com/Yagasaki7K/website-alogarapa/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Yagasaki7K/website-alogarapa?color=00BFA6">
   </a>
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-5965e0">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-00BFA6">
   <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Yagasaki7K/website-alogarapa?color=00BFA6" />
   <a href="https://github.com/Yagasaki7K/website-alogarapa/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/Yagasaki7K/website-alogarapa?color=00BFA6&logo=github">

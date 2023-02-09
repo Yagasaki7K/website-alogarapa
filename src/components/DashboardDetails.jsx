@@ -6,7 +6,7 @@ const DashboardDetails = styled.div`
 background: ${Colors.primary};
 height: 91.7vh;
 
-.garapa-list {
+    .garapa-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -27,7 +27,7 @@ height: 91.7vh;
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        background: #ffffff;
+        background: #fff;
         border: none;
         font-weight: 500;
         text-decoration: none;
@@ -83,12 +83,20 @@ height: 91.7vh;
             h2 {
                 margin-bottom: -5px;
                 color: #fff;
+                
+                @media (max-width: 1366px){
+                    color: #1f251c;
+                }
             }
             
             a {
                 font-weight: 300;
                 margin-top: 10px;
                 color: #fff;
+                
+                @media (max-width: 1366px){
+                    color: #1f251c;
+                }
             }
 
             i {

@@ -40,31 +40,19 @@ const MapStyle = styled.div`
 
   .map-popup {
     min-width: 210px;
+  }
 
-    h4 {
-      margin-bottom: 0.45rem;
-      color: #253827;
-      font-size: 1rem;
-    }
+  .map-popup h4 { margin-bottom: 0.45rem; color: #253827; font-size: 1rem; }
+  .map-popup p { font-size: 0.84rem; margin-bottom: 0.3rem; color: #4a5f4d; line-height: 1.4; }
+  .map-popup a { display:inline-block; margin-top:0.4rem; text-decoration:none; background:#dae77f; color:#253226; padding:0.44rem 0.7rem; border-radius:8px; font-size:0.82rem; font-weight:700; }
 
-    p {
-      font-size: 0.84rem;
-      margin-bottom: 0.3rem;
-      color: #4a5f4d;
-      line-height: 1.4;
-    }
+  @media (max-width: 768px) {
+    .mapa-projeto { height: 58vh; }
+  }
 
-    a {
-      display: inline-block;
-      margin-top: 0.4rem;
-      text-decoration: none;
-      background: #dae77f;
-      color: #253226;
-      padding: 0.44rem 0.7rem;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
-    }
+  @media (max-width: 313px) {
+    .mapa-projeto { height: 50vh; }
+    .map-popup { min-width: 165px; }
   }
 `
 

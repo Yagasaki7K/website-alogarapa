@@ -8,10 +8,12 @@ import DashboardDetails from '../components/DashboardDetails'
 import MapsDetails from '../components/MapsDetails'
 import MapStyle from '../components/MapStyle'
 import AddButton from '../components/AddButton'
+import RestaurantSignupModal from '../components/RestaurantSignupModal'
 
 import Logo from '../images/logo.png'
 import places from '../data/places.json'
 import { filterPlacesByRadius } from '../utils/geo'
+import { usePwaInstall } from '../context/PwaInstallContext'
 
 import 'leaflet/dist/leaflet.css'
 
@@ -38,6 +40,10 @@ const Dashboard = () => {
   const [userLocation, setUserLocation] = useState(null)
   const [locationStatus, setLocationStatus] = useState('loading')
   const [locationMessage, setLocationMessage] = useState('Solicitando sua localização...')
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showPwaHint, setShowPwaHint] = useState(false)
+  const [pwaFeedback, setPwaFeedback] = useState('')
+  const { promptInstall, isInstalled } = usePwaInstall()
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -70,6 +76,13 @@ const Dashboard = () => {
     })
   }, [])
 
+  useEffect(() => {
+    const hasSeenHint = localStorage.getItem('alogarapa:map-install-hint') === 'true'
+    if (!hasSeenHint && !isInstalled) {
+      setShowPwaHint(true)
+    }
+  }, [isInstalled])
+
   const mapCenter = userLocation ?? DEFAULT_CENTER
 
   const visiblePlaces = useMemo(() => {
@@ -80,6 +93,18 @@ const Dashboard = () => {
     return filterPlacesByRadius(places, userLocation, SEARCH_RADIUS_KM)
   }, [userLocation])
 
+  const handleInstallClick = async () => {
+    const result = await promptInstall()
+    setPwaFeedback(result.message)
+    localStorage.setItem('alogarapa:map-install-hint', 'true')
+    setShowPwaHint(false)
+  }
+
+  const dismissHint = () => {
+    localStorage.setItem('alogarapa:map-install-hint', 'true')
+    setShowPwaHint(false)
+  }
+
   return (
     <>
       <NavigatorHomeDetails>
@@ -89,8 +114,8 @@ const Dashboard = () => {
           </Link>
 
           <div className="menu-links">
-            <Link to="/sobre">Sobre AlôGarapa!</Link>
-            <a href="mailto:kalifyinc@gmail.com">Cadastre seu Restaurante</a>
+            <Link to="/sobre">Sobre AlôGarapa</Link>
+            <button className="menu-button" onClick={() => setIsModalOpen(true)}>Cadastre seu restaurante</button>
             <a href="mailto:kalifyinc@gmail.com">Contato</a>
           </div>
         </div>
@@ -105,6 +130,21 @@ const Dashboard = () => {
         <div className={`location-status ${locationStatus}`}>
           <strong>Status da localização:</strong> {locationMessage}
         </div>
+
+        {showPwaHint && (
+          <div className="install-hint">
+            <div>
+              <strong>Instale o app</strong>
+              <p>Adicione o AlôGarapa à tela inicial para abrir o mapa mais rápido.</p>
+            </div>
+            <div className="hint-actions">
+              <button onClick={handleInstallClick}>Baixar app</button>
+              <button className="secondary" onClick={dismissHint}>Agora não</button>
+            </div>
+          </div>
+        )}
+
+        {pwaFeedback && <p className="pwa-feedback">{pwaFeedback}</p>}
 
         <MapsDetails>
           <MapStyle>
@@ -165,35 +205,13 @@ const Dashboard = () => {
 
         <hr />
 
-        <footer>
-          <div className="footer-content">
-            <h2>AlôGarapa</h2>
-            <a href="http://kalify.vercel.app/" target="_blank" rel="noreferrer">Site Institucional</a>
-            <Link to="/sobre">Sobre nós</Link>
-          </div>
-
-          <div className="footer-content">
-            <h2>Descubra</h2>
-            <a href="mailto:kalifyinc@gmail.com">Cadastre seu negócio</a>
-            <Link to="/sobre">Como funciona?</Link>
-          </div>
-
-          <div className="footer-content">
-            <h2>Social</h2>
-            <a href="https://twitter.com/KalifyInc" target="_blank" rel="noreferrer">Twitter</a>
-            <a href="https://instagram.com/yagasaki.dev" target="_blank" rel="noreferrer">Instagram</a>
-          </div>
-        </footer>
-
-        <div className="copyright">
-          <i>
-            © 2018 - {new Date().getFullYear()} - Kalify Inc |
-            © {new Date().getFullYear()} - AlôGarapa
-          </i>
+        <div className="copyright compact">
+          © {new Date().getFullYear()} Garapa Finder — Todos os direitos reservados. · <Link to="/termos">Termos de Uso</Link> · <Link to="/privacidade">Política de Privacidade</Link>
         </div>
       </DashboardDetails>
 
-      <AddButton />
+      <AddButton onClick={() => setIsModalOpen(true)} />
+      <RestaurantSignupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   )
 }

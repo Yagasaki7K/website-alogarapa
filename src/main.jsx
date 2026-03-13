@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from "react-dom/client";
 import './App.css'
+import './index.css'
 
 import LoginScreen from './pages/LoginScreen'
 import Dashboard from './pages/Dashboard'
@@ -8,8 +9,7 @@ import Dashboard from './pages/Dashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sobre from './pages/Sobre'
 
-const createRoot = ReactDOM.createRoot(document.getElementById("root"));
-createRoot.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
@@ -18,6 +18,5 @@ createRoot.render(
                 <Route path="/sobre" element={<Sobre />} />
             </Routes>
         </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
+    </React.StrictMode>
 )

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "garapa-001",
+    "nome": "Garapa da Primavera",
+    "telefone": "+55 19 99999-1001",
+    "endereco": "Rua das Camélias, 453 - Bairro Primavera, Campinas - SP",
+    "website": "https://kalify.vercel.app",
+    "latitude": -22.859352775021673,
+    "longitude": -47.04971628178976,
+    "descricao": "Caldo de cana natural e lanches rápidos.",
+    "horario": "Seg a Sáb, 08:00 às 19:00",
+    "categoria": "Garapa",
+    "imagem": "https://images.unsplash.com/photo-1542444459-db63c2c0b889?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "garapa-002",
+    "nome": "Cana Express Centro",
+    "telefone": "+55 11 98888-2002",
+    "endereco": "Av. São João, 1200 - Centro, São Paulo - SP",
+    "website": "https://kalify.vercel.app",
+    "latitude": -23.541874,
+    "longitude": -46.643462,
+    "descricao": "Sucos frescos e opções detox.",
+    "horario": "Todos os dias, 09:00 às 21:00",
+    "categoria": "Sucos",
+    "imagem": "https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "garapa-003",
+    "nome": "Ponto da Garapeira",
+    "telefone": "+55 61 97777-3003",
+    "endereco": "CLN 210 Bloco B - Asa Norte, Brasília - DF",
+    "website": "https://kalify.vercel.app",
+    "latitude": -15.759866,
+    "longitude": -47.882462,
+    "descricao": "Garapa artesanal com limão e gengibre.",
+    "horario": "Seg a Sex, 07:30 às 18:00",
+    "categoria": "Garapa",
+    "imagem": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "garapa-004",
+    "nome": "Casa do Caldo Gelado",
+    "telefone": "+55 31 96666-4004",
+    "endereco": "Rua dos Guajajaras, 998 - Centro, Belo Horizonte - MG",
+    "website": "https://kalify.vercel.app",
+    "latitude": -19.922731,
+    "longitude": -43.940967,
+    "descricao": "Especializada em cana gelada e combos.",
+    "horario": "Seg a Dom, 10:00 às 22:00",
+    "categoria": "Lanchonete",
+    "imagem": "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "garapa-005",
+    "nome": "Copo Verde Garapa",
+    "telefone": "+55 21 95555-5005",
+    "endereco": "Rua Visconde de Pirajá, 400 - Ipanema, Rio de Janeiro - RJ",
+    "website": "https://kalify.vercel.app",
+    "latitude": -22.985786,
+    "longitude": -43.205137,
+    "descricao": "Bebidas naturais perto da praia.",
+    "horario": "Todos os dias, 08:00 às 20:00",
+    "categoria": "Garapa",
+    "imagem": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=800&q=80"
+  }
+]

@@ -1,224 +1,105 @@
 import styled from 'styled-components'
 import Colors from '../utils/Colors'
 
-const HomeDetails = styled.div`
-    color: #fff;
-    position: absolute;
+const HomeDetails = styled.main`
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  color: #fff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 
-    margin-top: -61rem;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-    a {
-        font-weight: 400;
+    img {
+      width: clamp(10rem, 18vw, 13rem);
+      display: block;
     }
 
-    @media (max-width: 1600px) {
-        margin-top: -55rem;
+    li {
+      a {
+        color: #f7f7f7;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
     }
 
-    @media (max-width: 1440px) {
-        margin-top: -56rem;
+    button {
+      margin-left: auto;
+      background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
+      color: #23301f;
+      font-weight: 700;
+      border-radius: 999px;
+      height: 2.7rem;
+      width: 9.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    margin: auto;
+    text-align: center;
+    max-width: 900px;
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
     }
 
-    @media (max-width: 1366px) {
-        margin-top: -41rem;
+    .love {
+      background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
-    @media (max-width: 1024px) {
-        margin-top: -84rem;
+    button {
+      background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
+      color: #1f291c;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 0.95rem 2.6rem;
+      cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-        margin-top: -62rem;
-    }
+    .links {
+      margin-top: 5rem;
+      font-size: 0.9rem;
 
-    @media (max-width: 600px) {
-        margin-top: -45rem;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
     }
+  }
 
+  @media (max-width: 900px) {
     ul {
-        margin-top: 1rem;
-        display: flex;
-        font-weight: bold;
+      flex-wrap: wrap;
 
-        img {
-            width: 20rem;
-            margin-top: 0rem;
-            margin-right: 5rem;
-            margin-left: 2rem;
+      li {
+        display: none;
+      }
 
-            @media (max-width: 1600px) {
-                margin-left: 10rem;
-            }
-
-            @media (max-width: 1440px) {
-                margin-left: 8rem;
-            }
-
-            @media (max-width: 1024px) {
-                margin-left: 19rem;
-            }
-
-            @media (max-width: 768px) {
-                margin-left: 10rem;
-            }
-
-            @media (max-width: 600px) {
-                margin-top: 0rem;
-                margin-left: 0rem;
-            }
-        }
-        
-        li {
-            margin-right: 3rem;
-            margin-top: 2.2rem;
-            list-style: none;
-
-            @media (max-width: 1024px) {
-                display: none;
-            }
-
-            a {
-                color: #fff;
-                text-decoration: none;
-
-                :hover {
-                    transition: 1s;
-                    background: ${Colors.primary};
-                    background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent; 
-                }
-            }
-
-        }
-
-        button {
-            background: ${Colors.primary};
-            background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%); 
-            color: #fff;
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-            border-radius: 15px;
-            margin-left: 45rem;
-            margin-top: 1.5rem;
-            font-weight: bold;
-
-            @media (max-width: 1600px) {
-                margin-left: 10rem;
-            }
-
-            @media (max-width: 1440px) {
-                margin-left: 2rem;
-            }
-
-            @media (max-width: 1366px) {
-                margin-left: 10rem;
-            }
-
-            @media (max-width: 1024px) {
-                display: none;
-            }
-
-            height: 2.5rem;
-            width: 10rem;
-
-            cursor: pointer;
-
-            :hover {
-                transition: 2s;
-                background: ${Colors.primaryAlt};
-                background: linear-gradient(90deg, ${Colors.primaryAlt} 0%, ${Colors.primary} 100%); 
-            }
-        }   
+      button {
+        margin-left: 0;
+      }
     }
 
     .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-        margin-top: 5rem;
-        line-height: 5rem;
-
-        @media (max-width: 1366px) {
-            margin-top: -1rem;
-            margin-left: 5rem;
-
-        }
-
-        h1 {
-            font-size: 5rem;
-            margin-top: 8rem;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            font-family: 'Poppins',sans-serif;
-
-            @media (max-width: 600px) {
-                margin-top: 2rem;
-                font-size: 3rem;
-            }
-        }
-
-        .love {
-            background: ${Colors.primary};
-            background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        button {
-            background: ${Colors.primary};
-            background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%); 
-            color: #fff;
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            font-weight: bold;
-            font-size: 1.2rem;
-            border-radius: 25px;
-            padding: 1rem 3rem;
-
-            cursor: pointer;
-
-            :hover {
-                transition: 2s;
-                background: ${Colors.primaryAlt};
-                background: linear-gradient(90deg, ${Colors.primaryAlt} 0%, ${Colors.primary} 100%); 
-            }
-        }
-        
-        .links {
-            margin-top: 18rem;
-
-            @media (max-width: 1440px) {
-                margin-top: 12rem;
-            }
-
-            @media (max-width: 1366px) {
-                margin-top: 6rem;
-            }
-
-            @media (max-width: 600px) {
-                margin-top: 5rem;
-            }
-
-            a {
-                color: #fff;
-                text-decoration: none;
-
-                :hover {
-                    background: ${Colors.primary};
-                    background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent; 
-                }
-            }
-        }
+      margin-top: 2rem;
     }
+  }
 `
 
 export default HomeDetails

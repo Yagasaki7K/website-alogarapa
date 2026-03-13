@@ -1,9 +1,10 @@
-import { React, useState } from 'react'
+import React from 'react'
 import NavigatorHomeDetails from '../components/NavigatorHomeDetails'
 import DashboardDetails from '../components/DashboardDetails'
 import MapsDetails from '../components/MapsDetails'
 
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { Link } from 'react-router-dom'
 import MapStyle from '../components/MapStyle'
 
 import 'leaflet/dist/leaflet.css'
@@ -12,17 +13,15 @@ import Logo from '../images/logo.png'
 import AddButton from '../components/AddButton'
 
 const Dashboard = () => {
-    const [garapaData, setGarapaData] = useState(null);
-
     return (
         <>
             <NavigatorHomeDetails>
                 <div className="NavMenu">
-                    <a href="/">
-                        <img src={Logo} />
-                    </a>
+                    <Link to="/">
+                        <img src={Logo} alt="AlôGarapa" />
+                    </Link>
 
-                    <a href="/sobre">Sobre AlôGarapa!</a>
+                    <Link to="/sobre">Sobre AlôGarapa!</Link>
                     <a href="mailto:kalifyinc@gmail.com">Cadastre seu Restaurante</a>
                     <a href="mailto:kalifyinc@gmail.com">Contato</a>
                 </div>
@@ -35,7 +34,7 @@ const Dashboard = () => {
 
                 <MapsDetails>
                     <MapStyle>
-                        <div layout-align="center center" style={{ background: 'white', position: 'relative' }}>
+                        <div style={{ background: 'white', position: 'relative' }}>
                             <MapContainer center={[-16.350, -56.666]} zoom={4} scrollWheelZoom={false} className="mapa-projeto">
                                 <TileLayer
                                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -57,22 +56,22 @@ const Dashboard = () => {
                 <footer>
                     <div className="footer-content">
                         <h2>FindYourPet</h2>
-                        <a href="http://kalify.vercel.app/" target="_blank">Site Institucional <i className="uil uil-external-link-alt"></i></a>
-                        <a href="/sobre">Sobre nós</a>
+                        <a href="http://kalify.vercel.app/" target="_blank" rel="noreferrer">Site Institucional <i className="uil uil-external-link-alt"></i></a>
+                        <Link to="/sobre">Sobre nós</Link>
                         <a href="mailto:kalifyinc@gmail.com">Fale Conosco</a>
-                        <a href="/sobre#developer">Carreiras</a>
+                        <Link to="/sobre#developer">Carreiras</Link>
                     </div>
 
                     <div className="footer-content">
                         <h2>Descubra</h2>
                         <a href="mailto:kalifyinc@gmail.com">Cadastre seu negócio</a>
-                        <a href="/sobre">Como funciona?</a>
+                        <Link to="/sobre">Como funciona?</Link>
                     </div>
 
                     <div className="footer-content">
                         <h2>Social</h2>
-                        <a href="https://twitter.com/KalifyInc" target="_blank">Twitter <i className="uil uil-external-link-alt"></i></a>
-                        <a href="https://instagram.com/yagasaki.dev" target="_blank">Instagram <i className="uil uil-external-link-alt"></i></a>
+                        <a href="https://twitter.com/KalifyInc" target="_blank" rel="noreferrer">Twitter <i className="uil uil-external-link-alt"></i></a>
+                        <a href="https://instagram.com/yagasaki.dev" target="_blank" rel="noreferrer">Instagram <i className="uil uil-external-link-alt"></i></a>
                     </div>
                 </footer>
 

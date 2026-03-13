@@ -1,22 +1,24 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import AppDetails from '../components/AppDetails'
 import AppBackground from '../components/AppBackground'
 import Logo from '../images/logo.png'
 
-function toHome() {
-    window.location.href = "/dashboard"
-}
-
 const App = () => {
+    const navigate = useNavigate()
+
+    const toHome = () => {
+        navigate('/dashboard')
+    }
     return (
         <>
             <AppBackground />
             <AppDetails>
                 <ul>
-                    <a href="/"><img src={Logo} /></a>
+                    <Link to="/"><img src={Logo} alt="AlôGarapa" /></Link>
                     <li><a href="https://kalify.vercel.app">Sobre a Kalify</a></li>
-                    <li><a href="https://discord.gg/jhSepmE7nN" target="_blank">Suporte</a></li>
-                    <li><a href="/">Download</a></li>
+                    <li><a href="https://discord.gg/jhSepmE7nN" target="_blank" rel="noreferrer">Suporte</a></li>
+                    <li><Link to="/">Download</Link></li>
                     <button onClick={() => toHome()}>Acessar</button>
                 </ul>
 
@@ -25,8 +27,8 @@ const App = () => {
                     <button onClick={() => toHome()}>Acessar</button>
 
                     <div className="links">
-                        <a href="/termos">Termos de Uso</a> - &nbsp;
-                        <a href="/politicas-de-privacidade">Políticas de Privacidade</a>
+                        <Link to="/termos">Termos de Uso</Link> - &nbsp;
+                        <Link to="/politicas-de-privacidade">Políticas de Privacidade</Link>
                     </div>
                 </div>
             </AppDetails>

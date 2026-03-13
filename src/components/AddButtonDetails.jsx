@@ -7,8 +7,8 @@ const AddPetButtonDetails = styled.div`
     height: 52px;
     color: #fff;
     position: fixed;
-    bottom: 24px;
-    right: 24px;
+    bottom: 20px;
+    right: 20px;
     z-index: 99;
     display: inline-flex;
     align-items: center;
@@ -16,10 +16,19 @@ const AddPetButtonDetails = styled.div`
     border-radius: 14px;
     font-size: 20px;
     box-shadow: 0 14px 28px rgba(20, 50, 30, 0.3);
+    cursor: pointer;
 
     :hover {
-      transition: 0.2s;
       transform: translateY(-2px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .firstButton {
+      width: 48px;
+      height: 48px;
+      right: 12px;
+      bottom: 12px;
     }
   }
 `

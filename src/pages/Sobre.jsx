@@ -25,11 +25,7 @@ const Sobre = () => {
                 </div>                        
             </div>
 
-            <div className="copyright">
-                <i>
-                © 2018 - {new Date().getFullYear()} - Kalify Inc |
-                © {new Date().getFullYear()} - AlôGarapa</i>
-            </div>
+            <div className="copyright">© 2026 Garapa Finder — Todos os direitos reservados.</div>
         </SobreDetails>
     )
 }

@@ -6,7 +6,7 @@ const HomeDetails = styled.main`
   z-index: 1;
   min-height: 100vh;
   color: #fff;
-  padding: 1.5rem;
+  padding: clamp(0.8rem, 2vw, 1.5rem);
   display: flex;
   flex-direction: column;
 
@@ -17,17 +17,15 @@ const HomeDetails = styled.main`
     gap: 1rem;
 
     img {
-      width: clamp(10rem, 18vw, 13rem);
+      width: clamp(9rem, 16vw, 12.2rem);
       display: block;
     }
 
-    li {
-      a {
-        color: #f7f7f7;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.95rem;
-      }
+    li a {
+      color: #f7f7f7;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
     }
 
     button {
@@ -36,8 +34,8 @@ const HomeDetails = styled.main`
       color: #23301f;
       font-weight: 700;
       border-radius: 999px;
-      height: 2.7rem;
-      width: 9.5rem;
+      min-height: 2.7rem;
+      padding: 0 1.3rem;
       cursor: pointer;
     }
   }
@@ -45,11 +43,11 @@ const HomeDetails = styled.main`
   .container {
     margin: auto;
     text-align: center;
-    max-width: 900px;
+    max-width: min(900px, 100%);
 
     h1 {
-      font-size: clamp(2rem, 6vw, 4.5rem);
-      line-height: 1.1;
+      font-size: clamp(1.8rem, 5.8vw, 4.5rem);
+      line-height: 1.12;
       text-transform: uppercase;
       margin-bottom: 1.4rem;
     }
@@ -62,18 +60,34 @@ const HomeDetails = styled.main`
       color: transparent;
     }
 
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
     button {
       background: linear-gradient(90deg, ${Colors.primary} 0%, ${Colors.primaryAlt} 100%);
       color: #1f291c;
       font-size: 1rem;
       font-weight: 700;
       border-radius: 999px;
-      padding: 0.95rem 2.6rem;
+      padding: 0.95rem 2rem;
       cursor: pointer;
     }
 
+    .download {
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .download-feedback {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+    }
+
     .links {
-      margin-top: 5rem;
+      margin-top: clamp(2rem, 10vw, 4.4rem);
       font-size: 0.9rem;
 
       a {
@@ -81,9 +95,15 @@ const HomeDetails = styled.main`
         text-decoration: none;
       }
     }
+
+    .copyright-home {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     ul {
       flex-wrap: wrap;
 
@@ -95,9 +115,11 @@ const HomeDetails = styled.main`
         margin-left: 0;
       }
     }
+  }
 
-    .container {
-      margin-top: 2rem;
+  @media (max-width: 313px) {
+    .container button {
+      width: 100%;
     }
   }
 `

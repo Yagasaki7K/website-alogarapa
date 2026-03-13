@@ -1,61 +1,59 @@
 import styled from 'styled-components'
-import Colors from '../utils/Colors'
 
-const SobreDetails = styled.div`
-    background: ${Colors.primary};
+const SobreDetails = styled.main`
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8faf7 0%, #edf5ec 100%);
+  color: #213023;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+
+  img {
+    width: clamp(180px, 30vw, 280px);
+    margin: 0.5rem 0 1rem;
+  }
+
+  .content {
+    width: min(860px, 100%);
+    background: #fff;
+    border: 1px solid #dbe6db;
+    border-radius: 16px;
+    padding: 1.4rem;
+    box-shadow: 0 10px 24px rgba(41, 57, 41, 0.1);
+
+    a {
+      color: #2b5a37;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    p {
+      color: #425744;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+  }
+
+  .backtoHome {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin: 1.4rem 0 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
 
-    img {
-        margin-top: 100px;
-        width: 400px;
-        padding: 20px 0 0 20px;
-    }
-
-    .break {
-        flex-basis: 100%;
-        height: 0;
-    }
-
-    .content {
-        color: #fff;
-        width: 60%;
-        margin-top: 20px;
-
-        a {
-            color: #fff;
-        }
-
-        h2 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-    }
-
-    .backtoHome {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .copyright {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        color: #fff;
-    }
-
-
-    @media screen and (max-width: 1920px) {
-        .copyright {
-            margin-bottom: 144px;
-        }
-    }
+  .copyright {
+    margin-top: 1rem;
+    color: #6c806e;
+    text-align: center;
+    font-size: 0.85rem;
+  }
 `
 
 export default SobreDetails

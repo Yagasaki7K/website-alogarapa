@@ -18,7 +18,7 @@ const Sobre = () => {
                 <p>Você pode enviar um e-mail para a <a href="mailto:kalifyinc@gmail.com">Kalify Inc</a> ou acessar os três links disponíveis em nosso sistema, sendo eles "Contato", "Cadastrar restaurante" e o botão de [+] no canto inferior direito, além de claro, você poderá tirar dúvidas também de outras seções da nossa plataforma.</p>
 
                 <h2 id="developer">Sou desenvolvedor e quero apoiar o projeto</h2>
-                <p>Você poderá acessar nosso <a href="https://github.com/Yagasaki7k/website-alogarapa" target="_blank" rel="noreferrer">repositório no Github</a> e enviar um pull request com a alteração que você fez, nossa equipe irá analisar e em seguida subirá a para a brench de produção. Você também pode participar de outros projetos como FindYourPet e Web Essentials que pertencem ao grupo da Kalify Inc através de <a href="https://discord.gg/CFhzRE6ztp">nosso Discord</a>.</p>
+                <p>Você poderá acessar nosso <a href="https://github.com/Yagasaki7k/website-alogarapa" target="_blank" rel="noreferrer">repositório no Github</a> e enviar um pull request com a alteração que você fez, nossa equipe irá analisar e em seguida subirá a para a brench de produção. Você também pode participar de outros projetos como FindYourPet e Web Essentials que pertencem ao grupo da Kalify Inc através de <a href="https://discord.gg/CFhzRE6ztp" target="_blank" rel="noreferrer">nosso Discord</a>.</p>
 
                 <div className="backtoHome">
                     <Link to="/dashboard">Voltar ao Início</Link>       

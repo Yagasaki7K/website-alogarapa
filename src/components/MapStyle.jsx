@@ -1,85 +1,71 @@
 import styled from 'styled-components'
 
 const MapStyle = styled.div`
-#evento-mapa { width:100%; height:100%; }
-.mapa-projeto {
-    height: 37rem;
+  .mapa-projeto {
+    height: min(70vh, 560px);
     width: 100%;
-    position:absolute;
-    background:#fff;
-    color:#210062;
-    z-index: 1;
-}
-.mapa-projeto > div {
-    position:relative;
-}
+    border-radius: 12px;
+  }
 
-.mapa-projeto > div > img {
-    position:absolute;
-    top:0;
-    right:0;
-    width:60%;
-    transform: translate(30%,-60%);
-    border-radius:10px;
-}
+  .juice-marker,
+  .user-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
 
-.mapa-legenda {
-    width: 19rem;
-    height: 27rem;
-    position:absolute;
-    left:0;
-    bottom:0;
-    top: 0;
-    margin-top: -1rem;
-    margin-left: 4rem;
-    z-index:5;
-    background:rgba(255,255,255,.8);
-    padding:20px;
-    border:1px solid #ccc;
-    border-radius:15px;
-}
+  .juice-marker span,
+  .user-marker span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid #d6c959;
+    box-shadow: 0 8px 16px rgba(63, 60, 28, 0.22);
+    font-size: 18px;
+  }
 
-@media(max-width:599px){
-    .mapa-legenda {
-        position:static;
-        width:100%;
+  .user-marker span {
+    border-color: #4c8f6b;
+  }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 14px 26px rgba(20, 34, 20, 0.18);
+  }
+
+  .map-popup {
+    min-width: 210px;
+
+    h4 {
+      margin-bottom: 0.45rem;
+      color: #253827;
+      font-size: 1rem;
     }
-}
 
-.mapa-legenda>h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size:1.8rem;
-    line-height:1.8rem;
-    margin:0 0 10px 0;
-}
-
-.mapa-legenda>div>div {
-    margin:4px 10px;
-}
-
-.mapa-legenda>div>div>span {
-    display:inline-block;
-    width:40px;
-    height:30px;
-}
-
-.mapa-legenda>div>div>div {
-    padding-left:10px;
-}
-
-.mapa-legenda {
-    .markcolor {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-        margin-left: 0rem;
-
-        :first-child {
-            margin-top: 3rem;
-        }
+    p {
+      font-size: 0.84rem;
+      margin-bottom: 0.3rem;
+      color: #4a5f4d;
+      line-height: 1.4;
     }
-}
+
+    a {
+      display: inline-block;
+      margin-top: 0.4rem;
+      text-decoration: none;
+      background: #dae77f;
+      color: #253226;
+      padding: 0.44rem 0.7rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+  }
 `
 
 export default MapStyle

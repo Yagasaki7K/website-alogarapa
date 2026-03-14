@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import SobreDetails from "../components/SobreDetails";
-import Logo from "../images/logo.png";
-import Icon from "../images/icon.png";
 
 const Sobre = () => {
     return (
         <SobreDetails>
-            <img src={Icon} alt="AlôGarapa" />
-
             <div className="content">
                 <div className="about-title">
                     <h2>Sobre o AlôGarapa!</h2>

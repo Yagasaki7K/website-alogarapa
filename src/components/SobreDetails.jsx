@@ -10,11 +10,6 @@ const SobreDetails = styled.main`
     flex-direction: column;
     padding: 2rem 1rem;
 
-    img {
-        width: clamp(180px, 30vw, 280px);
-        margin: 0.5rem 0 1rem;
-    }
-
     .content {
         width: min(860px, 100%);
         background: #fff;

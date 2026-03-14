@@ -102,7 +102,8 @@ const DashboardDetails = styled.main`
   .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(10, 20, 13, 0.58);
+    background: radial-gradient(circle at top, rgba(35, 78, 48, 0.3), rgba(7, 12, 8, 0.66));
+    backdrop-filter: blur(3px);
     z-index: 100;
     display: flex;
     align-items: center;
@@ -115,22 +116,138 @@ const DashboardDetails = styled.main`
     width: min(700px, 100%);
     max-height: 90vh;
     overflow-y: auto;
-    background: #fff;
-    border-radius: 18px;
-    padding: 1.2rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
+    border: 1px solid #d7e6d7;
+    border-radius: 20px;
+    padding: 1.3rem;
     position: relative;
+    box-shadow: 0 20px 45px rgba(12, 27, 16, 0.22);
   }
 
-  .close-modal { position:absolute; top:0.6rem; right:0.8rem; background:transparent; font-size:1.8rem; cursor:pointer; }
+  .modal-card h2 {
+    margin: 0;
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    color: #1f4027;
+  }
 
-  .signup-form { display:grid; gap:0.8rem; margin-top:1rem; }
-  .signup-form label { display:grid; gap:0.35rem; font-size:0.9rem; }
-  .signup-form input, .signup-form textarea { border:1px solid #cfdccf; border-radius:10px; padding:0.65rem 0.7rem; }
+  .modal-card > p {
+    margin: 0.55rem 0 0.3rem;
+    color: #49614e;
+    font-size: 0.93rem;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    border: 1px solid #cfe0cf;
+    background: #f2f8f2;
+    color: #284b31;
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .close-modal:hover {
+    background: #e6f2e6;
+    transform: translateY(-1px);
+  }
+
+  .close-modal:focus-visible {
+    outline: 2px solid #2f6f4f;
+    outline-offset: 2px;
+  }
+
+  .signup-form {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  .signup-form label {
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    color: #29452f;
+  }
+
+  .signup-form span {
+    font-weight: 600;
+  }
+
+  .signup-form input,
+  .signup-form textarea {
+    border: 1px solid #cfdccf;
+    border-radius: 12px;
+    padding: 0.7rem 0.78rem;
+    font-size: 0.95rem;
+    color: #263a2a;
+    background: #fff;
+    transition: all 0.2s ease;
+  }
+
+  .signup-form input:hover,
+  .signup-form textarea:hover {
+    border-color: #b8cdbb;
+  }
+
+  .signup-form input:focus,
+  .signup-form textarea:focus {
+    outline: none;
+    border-color: #3f7a56;
+    box-shadow: 0 0 0 3px rgba(63, 122, 86, 0.18);
+  }
+
+  .signup-form textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+
   .signup-form input.invalid { border-color: #c95656; }
-  .signup-form small, .form-error-block { color:#bb4545; font-size:0.78rem; }
-  .signup-form button { background:#1f5a33; color:#fff; border-radius:999px; padding:0.8rem 1rem; cursor:pointer; }
-  .status-message.success { color:#2b6a3c; }
-  .status-message.error { color:#bb4545; }
+  .signup-form small,
+  .form-error-block {
+    color: #bb4545;
+    font-size: 0.78rem;
+  }
+
+  .signup-form button {
+    background: #1f5a33;
+    color: #fff;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .signup-form button:hover:not(:disabled) {
+    background: #184929;
+    transform: translateY(-1px);
+  }
+
+  .signup-form button:focus-visible {
+    outline: 2px solid #2f6f4f;
+    outline-offset: 2px;
+  }
+
+  .signup-form button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+
+  .status-message {
+    margin: 0;
+    font-size: 0.88rem;
+  }
+
+  .status-message.loading { color: #3d5f42; }
+  .status-message.success { color: #2b6a3c; }
+  .status-message.error { color: #bb4545; }
 
   @media (max-width: 1024px) {
     .install-hint { flex-direction: column; align-items: flex-start; }
@@ -140,6 +257,11 @@ const DashboardDetails = styled.main`
     .results-title-row { flex-direction: column; align-items: flex-start; }
     .hint-actions { width: 100%; }
     .hint-actions button { flex: 1; }
+
+    .modal-card {
+      border-radius: 16px;
+      padding: 1rem;
+    }
   }
 
   @media (max-width: 313px) {

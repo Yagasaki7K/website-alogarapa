@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import SobreDetails from '../components/SobreDetails'
 import Logo from '../images/logo.png'
+import Icon from '../images/icon.png'
 
 const Sobre = () => {
     return (
@@ -8,7 +9,10 @@ const Sobre = () => {
             <img src={Logo} alt="AlôGarapa" />
 
             <div className="content">
-                <h2>Sobre o AlôGarapa!</h2>
+                <div className="about-title">
+                    <img src={Icon} alt="Ícone AlôGarapa" className="about-icon" />
+                    <h2>Sobre o AlôGarapa!</h2>
+                </div>
                 <p>Nós do AlôGarapa, somos um serviço de aplicativo web que visa compartilhar informações e localidade sobre estabelecimentos que oferecem o tão amado, caldo de cana em seus cardápios. Atualmente mantido pela equipe da Kalify Inc, o AloGarapa é rápido, fácil e simples de se utilizar.</p>
                 
                 <h2>Como funciona?</h2>
@@ -25,7 +29,7 @@ const Sobre = () => {
                 </div>                        
             </div>
 
-            <div className="copyright">© 2026 Garapa Finder — Todos os direitos reservados.</div>
+            <div className="copyright">© 2021–2026 AlôGarapa. Todos os direitos reservados.</div>
         </SobreDetails>
     )
 }

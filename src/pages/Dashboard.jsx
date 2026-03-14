@@ -206,7 +206,7 @@ const Dashboard = () => {
         <hr />
 
         <div className="copyright compact">
-          © {new Date().getFullYear()} Garapa Finder — Todos os direitos reservados. · <Link to="/termos">Termos de Uso</Link> · <Link to="/privacidade">Política de Privacidade</Link>
+          © 2021–2026 AlôGarapa. Todos os direitos reservados. · <Link to="/termos">Termos de Uso</Link> · <Link to="/privacidade">Política de Privacidade</Link>
         </div>
       </DashboardDetails>
 

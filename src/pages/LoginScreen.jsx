@@ -28,7 +28,6 @@ const App = () => {
         <ul>
           <Link to="/"><img src={Logo} alt="AlôGarapa" /></Link>
           <li><a href="https://kalify.vercel.app" target="_blank" rel="noreferrer">Sobre a Kalify</a></li>
-          <li><a href="https://discord.gg/jhSepmE7nN" target="_blank" rel="noreferrer">Suporte</a></li>
           <li><a href="mailto:kalifyinc@gmail.com">Contato</a></li>
           <button onClick={toHome}>Acessar mapa</button>
         </ul>
@@ -44,7 +43,7 @@ const App = () => {
           <div className="links">
             <Link to="/termos">Termos de Uso</Link> · <Link to="/privacidade">Política de Privacidade</Link>
           </div>
-          <div className="copyright-home">© 2026 Garapa Finder — Todos os direitos reservados.</div>
+          <div className="copyright-home">© 2021–2026 AlôGarapa. Todos os direitos reservados.</div>
         </section>
       </AppDetails>
     </>
